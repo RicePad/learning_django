@@ -4,5 +4,18 @@
   <h1>Hello this is index.html </h1>
   {{ insert_me }}
   <img src="{% static "images/jslogo.png" %}" alt="Image not showing up">
+<div>
+  {% if access_records %}
+
+      {% for arr in access_records %}
+
+        <h2>{{ arr.name }}</h2>
+        <h2>{{ arr.date }}</h2>
+
+      {% endfor %}
+
+  {% else %}
+    <p> NO ACCESS RECORD FOUND</p>
+  {% endif %}
+</div>
 </html>
-          

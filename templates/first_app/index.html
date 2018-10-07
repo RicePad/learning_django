@@ -6,16 +6,23 @@
   <img src="{% static "images/jslogo.png" %}" alt="Image not showing up">
 <div>
   {% if access_records %}
-
+    <table>
+    <thead>
+      <tr>
+        <th>SiteName</th>
+        <th>DateAccesed</th>
+      </tr>
+    </thead>
+    <tbody>
       {% for arr in access_records %}
-
-        <h2>{{ arr.name }}</h2>
-        <h2>{{ arr.date }}</h2>
-
+      <tr>
+        <td>{{ arr.name }}</td>
+        <td>{{ arr.date }}</td>
+      </tr>
       {% endfor %}
-
+    </tbody>
+  </table>
   {% else %}
     <p> NO ACCESS RECORD FOUND</p>
   {% endif %}
-</div>
 </html>

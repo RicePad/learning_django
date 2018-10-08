@@ -3,7 +3,7 @@
 <html>
 {% block body_block %}
     <h1>Hello this is index.html </h1>
-    {{ insert_me }}
+    {{ insert_hello|capfirst }}
     <img src="{% static "images/jslogo.png" %}" alt="Image not showing up">
     <body>
       <a href="{% url 'firstapp:show_form'%}"> send to form page</a>
